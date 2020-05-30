@@ -1,0 +1,26 @@
+[
+ {
+  "url_title": "About-Me",
+  "title": "About Me",
+  "sub_title": "A Computer Science Student",
+  "visible": true
+ },
+ {
+  "url_title": "My-Experience",
+  "title": "My Experience",
+  "sub_title": "What did i do",
+  "visible": true
+ },
+ {
+  "url_title": "My-Acheivements-",
+  "title": "My Acheivements ",
+  "sub_title": "Click Here to check out my acheivements",
+  "visible": true
+ },
+ {
+  "url_title": "Contact-Me",
+  "title": "Contact Me",
+  "sub_title": "Check Here to Contact Me",
+  "visible": true
+ }
+]
