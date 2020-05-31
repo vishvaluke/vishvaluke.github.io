@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 @import url("https://fonts.googleapis.com/css?family=Questrial");
-
+.container {
+  border-radius: 5px;
+  background-color: #FFFFFF	;
+  padding: 10px;
+  color: black ;	
+}
 body {
   margin: 0%;
   padding: 0%;
