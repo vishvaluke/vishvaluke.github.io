@@ -11,7 +11,7 @@ html {
   top: 0;
   left: 0;
   background-color: #111; /* Black*/
-  
+
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
@@ -25,7 +25,7 @@ html {
   color: #818181;
   display: block;
   transition: 0.3s;
-  
+
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -52,7 +52,7 @@ html {
   border: none;
   position: fixed;
   top: 0;
-  
+
 }
 
 .openbtn:hover {
@@ -82,7 +82,7 @@ input[type=submit]:hover {
 /* Style the container/contact section */
 .container {
   border-radius: 5px;
-  background-color: #0A0A0A	;
+  background-color: #FFFFFF	;
   padding: 10px;
 }
 
@@ -100,7 +100,33 @@ input[type=submit]:hover {
   display: table;
   clear: both;
 }
+.line-1{
 
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 10px 0 0 10px;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 5s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 5.9em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column, input[type=submit] {
@@ -108,8 +134,8 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 }
-
 </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -118,169 +144,169 @@ input[type=submit]:hover {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+     <script>
+      function getStylesheet() {
+        var currentTime = new Date().getHours();
+        if (0 <= currentTime&&currentTime < 9) {
+          document.write("<link rel='stylesheet' href='dark.css' type='text/css'>");
+        }
+        if (9 <= currentTime&&currentTime < 19) {
+          document.write("<link rel='stylesheet' href='index.css' type='text/css'>");
+        }
+        if (19 <= currentTime&&currentTime < 22) {
+          document.write("<link rel='stylesheet' href='dark.css' type='text/css'>");
+        }
+        if (22 <= currentTime&&currentTime <= 24) {
+          document.write("<link rel='stylesheet' href='dark.css' type='text/css'>");
+        }
+      }
+      getStylesheet();
+    </script>
   <link rel="icon" href="https://www.logolynx.com/images/logolynx/42/42ee3649d62e42fcb5a320d8c3ece57a.jpeg" type="image/png"></head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
   <body>
- 
     <div id="loading">
       <div id="spinner"></div>
     </div>
     <div id="profile">
-	 
-<button class="openbtn" onclick="openNav()">&#9776; Menu </button>
+      <button class="openbtn" onclick="openNav()">&#9776; Menu </button>
       <div id="profile_img" style="background: url(https://avatars0.githubusercontent.com/u/26120746?v=4) center;"></div>
-      <div id="username"><span style="display:block;">Vishva Luke</span><a href="https://github.com/vishvaluke">@vishvaluke</a></div>
+      <div id="username"><span style="display:block;"><p class="line-1 anim-typewriter">Vishva Luke &nbsp&nbsp</p></span><a href="https://github.com/vishvaluke">&nbsp&nbsp&nbsp&nbsp@vishvaluke</a></div>
       <div id="userbio" style="display: none;">undefined</div>
       <div id="about">
                 <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
                 <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
                 <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a href=""></a></span>
                 <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
-                <span style="display:block;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
+                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
                 <div class="socials">
-                <span style="display:none !important;"><a href="https://www.twitter.com/undefined" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.dribbble.com/undefined" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
-				<span style="display:block;"><a href="tel:+919489762119" target="_blank" class="socials"><i class="fa fa-phone"></i></a></span>
-				<span style="display:block;"><a href="mailto:vishvaluke@gmail.com" target="_blank" class="socials"><i class="fab fa-google"></i></a></span>
-			  <span style="display:block;"><a href="https://www.linkedin.com/in/vishvaprasanth/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
-				 <span style="display:block;"><a href="https://www.instagram.com/vishvaluke/" target="_blank" class="socials"><i class="fab fa-instagram"></i></a></span>
-				 
-				 
-                <span style="display:none !important;"><a href="https://www.medium.com/@undefined/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
+                  <span style="display:none !important;"><a href="https://www.twitter.com/undefined" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
+                  <span style="display:none !important;"><a href="https://www.dribbble.com/undefined" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
+				          <span style="display:block;"><a href="tel:+919489762119" target="_blank" class="socials"><i class="fa fa-phone"></i></a></span>
+				          <span style="display:block;"><a href="mailto:vishvaluke@gmail.com" target="_blank" class="socials"><i class="fab fa-google"></i></a></span>
+			            <span style="display:block;"><a href="https://www.linkedin.com/in/vishvaprasanth/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
+				          <span style="display:block;"><a href="https://www.instagram.com/vishvaluke/" target="_blank" class="socials"><i class="fab fa-instagram"></i></a></span>
+                  <span style="display:none !important;"><a href="https://www.medium.com/@undefined/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
                 </div>
-                </div>
-	
     </div>
-	
-    <div id="display" onclick=closeNav()>
-	<div id="mySidepanel" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#About-Me" >About</a>
-  <a href="#My-Experience">Experiences</a>
-  <a href="#work">Works</a>
-  <a href="#Contact-Me">Contact</a>
+    </div>
+<div id="display" onclick=closeNav()>
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#About-Me" >About</a>
+    <a href="#My-Experience">Experiences</a>
+    <a href="#work">Works</a>
+    <a href="#Contact-Me">Contact</a>
+  </div>
+  <div id="selfme">
+  <div class="main" id="About-Me">
+    <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;">About Me.</span>
+    <span>
+      <p> Hai There!
+    </span>
+  </div>
+  <div class="main" id="My-Experience">
+    <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;"> My Experience.</span>
+  </div>
 </div>
-<div class="main" id="About-Me">
-<h1> About Me.</h1>
-</div>
-<div class="main" id="My-Experience">
-<h1> My Experience.</h1>
-</div>
+  <div id="work">
+    <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;">My Work.</span>
+    <div class="projects" id="work_section">
+      <a href="https://github.com/vishvaluke/Snip-Sketch-OCR" target="_blank">
+      <section>
+        <div class="section_title">Snip-Sketch-OCR</div>
+          <div class="about_section">
+          <span style="display:block;">A Snip &amp; Sketch OCR helping user to extract contents from images and documents without needing to download the whole file.</span>
+        </div>
+        <div class="bottom_section">
+          <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
 
-
-
-	
-      <div id="work">
-        <h1>My Work.</h1>
-        <div class="projects" id="work_section">
-                        <a href="https://github.com/vishvaluke/Snip-Sketch-OCR" target="_blank">
-                        <section>
-                            <div class="section_title">Snip-Sketch-OCR</div>
-                            <div class="about_section">
-                            <span style="display:block;">A Snip &amp; Sketch OCR helping user to extract contents from images and documents without needing to download the whole file.</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/vishvaluke/Quotes-Extractor" target="_blank">
-                        <section>
-                            <div class="section_title">Quotes-Extractor</div>
-                            <div class="about_section">
-                            <span style="display:block;">Quotes Extractor, A Web Scrapping Script to transform best quotes of a book to images that are perfect for Instagram.</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/vishvaluke/Encrpyt-and-Decrypt" target="_blank">
-                        <section>
-                            <div class="section_title">Encrpyt-and-Decrypt</div>
-                            <div class="about_section">
-                            <span style="display:block;">A Entry level Login Page With Encrypted form of password </span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C++</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/vishvaluke/Hangman-In-C" target="_blank">
-                        <section>
-                            <div class="section_title">Hangman-In-C</div>
-                            <div class="about_section">
-                            <span style="display:block;">Hang Man Game Using simple C Program</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
-                            </div>
-                        </section>
-                        </a></div>
+        </div>
+      </section>
+      </a>
+      <a href="https://github.com/vishvaluke/Quotes-Extractor" target="_blank">
+      <section>
+        <div class="section_title">Quotes-Extractor</div>
+        <div class="about_section">
+          <span style="display:block;">Quotes Extractor, A Web Scrapping Script to transform best quotes of a book to images that are perfect for Instagram.</span>
+        </div>
+        <div class="bottom_section">
+          <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
+        </div>
+      </section>
+      </a>
+      <a href="https://github.com/vishvaluke/Encrpyt-and-Decrypt" target="_blank">
+      <section>
+        <div class="section_title">Encrpyt-and-Decrypt</div>
+        <div class="about_section">
+          <span style="display:block;">A Entry level Login Page With Encrypted form of password </span>
+        </div>
+        <div class="bottom_section">
+          <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C++</span>
+        </div>
+      </section>
+      </a>
+      <a href="https://github.com/vishvaluke/Hangman-In-C" target="_blank">
+      <section>
+      <div class="section_title">Hangman-In-C</div>
+      <div class="about_section">
+        <span style="display:block;">Hang Man Game Using simple C Program</span>
       </div>
-	  <div class="main" id="Contact-Me">
-<h1> Contact Me.</h1>
-<div class="container">
-  <div>
-	<par>
-	<h4><b>Phone Number:</b> <a href="tel:+919489762119">+91 94897 62119</a>
-	<br>
-	<b> Email:</b> <a href="mailto:vishvaluke@gmail.com"> vishvaluke@gmail.com </a></h4>
-	</par>
-    <h4>Call Me , Mail Me, or Leave me a message:</h4>
-  </div>
-  <div class="row">
-    <div class="column">
-      <form
-  action="https://formspree.io/mbjzgvol"
-  method="POST"
->
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email..">
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Your Message.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
-      </form>
+      <div class="bottom_section">
+        <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C</span>
+      </div>
+      </section>
+      </a>
     </div>
-  </div>
-</div>
-</div>
-      <div id="forks" style="display:none;">
-        <h1>Forks.</h1>
-        <div class="projects" id="forks_section"></div>
+    </div>
+	  <div class="main" id="Contact-Me">
+      <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;"> Contact Me.</span>
+      <div class="container">
+        <div>
+          <h4>Call Me , Mail Me, or Leave me a message:</h4>
+        </div>
+        <div class="row">
+          <div class="column">
+            <form
+              action="https://formspree.io/mbjzgvol"
+              method="POST"
+              >
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email..">
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Your Message.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="forks" style="display:none;">
+      <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;">Forks.</span>
+      <div class="projects" id="forks_section"></div>
       </div>
 	  <div id="blog_section">
-	<h1>Blogs.</h1>
-        <div id="blogs"></div>
-	</div>
-      
-      <div id="footer" >
-        <a onclick=closeNav()>made on earth by a human</a>
-      </div>
+	     <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;">Blogs.</span>
+      <div id="blogs"></div>
+	   </div>
+    <div id="footer" >
+      <a onclick=closeNav()>made on earth by a human</a>
     </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
     <script type="text/javascript">
-	
-	/* Set the width of the sidebar to 250px (show it) */
-function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
-}
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
 
 /* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
-}
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
       setTimeout(function() {
         document.getElementById("loading").classList.add("animated");
         document.getElementById("loading").classList.add("fadeOut");
@@ -310,17 +336,10 @@ function closeNav() {
             </a>
             `);
         }
-		$('.container').infiniteScroll({
-			// options
-			path: '.pagination__next',
-			append: '.post',
-			history: false,
-		});
       }).fail(function() {
         return (document.getElementById("blog_section").style.display = "none");
       });
     </script>
-
     <script>
 
       const magicProjectsGrid = new MagicGrid({
@@ -342,13 +361,12 @@ function closeNav() {
         maxColumns: 2,
         useTransform: true
       });
-	 
+
 
       $("document").ready(() => {
         magicProjectsGrid.listen();
         magicForksGrid.listen();
       });
     </script>
-  
-
-</body></html>
+</body>
+</html>
