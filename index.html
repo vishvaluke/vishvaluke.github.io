@@ -127,6 +127,35 @@ input[type=submit]:hover {
   animation: typewriter 3s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
 }
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 20px; padding: 0; line-height: 20px;
+    border: 0px solid #FFFFFF; border-radius: 30px;
+    background-color: #9E9E9E;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 30px; margin: -5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 31px;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px 0px #757575;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #42A5F5;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #42A5F5;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+    background-color: #2196F3; 
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}
 @keyframes typewriter{
   from{width: 0;}
   to{width: 5.9em;}
@@ -142,6 +171,7 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 }
+
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 </style>
 	<meta http-equiv="cache-control" content="no-cache" />
@@ -162,17 +192,20 @@ input[type=submit]:hover {
      <script>
       function getStylesheet() {
         var currentTime = new Date().getHours();
-        if (0 <= currentTime&&currentTime < 9) {
-          document.write("<link rel='stylesheet' href='dark.css' type='text/css'>");
+        if (0 <= currentTime&&currentTime < 1) {
+          document.write("<link id='stylesheet' rel='stylesheet' href='dark.css' type='text/css'>");
         }
-        if (9 <= currentTime&&currentTime < 19) {
-          document.write("<link rel='stylesheet' href='index.css' type='text/css'>");
+        if (1 <= currentTime&&currentTime < 19) {
+          document.write("<link id='stylesheet' rel='stylesheet' href='index.css' type='text/css'>");
+
         }
         if (19 <= currentTime&&currentTime < 22) {
-          document.write("<link rel='stylesheet' href='dark.css' type='text/css'>");
+          document.write("<link id='stylesheet' rel='stylesheet' href='dark.css' type='text/css'>");
+
         }
         if (22 <= currentTime&&currentTime <= 24) {
-          document.write("<link rel='stylesheet' href='dark.css' type='text/css'>");
+          document.write("<link id='stylesheet' rel='stylesheet' href='dark.css' type='text/css'>");
+
         }
       }
       getStylesheet();
@@ -186,6 +219,7 @@ input[type=submit]:hover {
     </div>
 	
     <div id="profile">
+			
       <button class="openbtn" onclick="openNav()">&#9776; Menu </button>
 	  <div id="profile_img" style="background: url(https://avatars0.githubusercontent.com/u/26120746?v=4) center;"></div>
       <div id="username" ><span style="display:block;">Vishva Luke </span><a href="https://github.com/vishvaluke" style="text-align:center">&nbsp&nbsp&nbsp&nbsp@vishvaluke</a></div>
@@ -220,6 +254,8 @@ input[type=submit]:hover {
 	
   </div>
   <div id="selfme">
+	
+<button id="myDIV" class="glow-on-hover" type="button" style="position: absolute;right: 0px;" onclick="this.style.visibility= 'hidden';setStyleSheet('index.css')">Click Here to Change Theme</button>
   <div class="main" id="About-Me">
     <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;">About Me.</span>
     <span>
@@ -354,9 +390,25 @@ input[type=submit]:hover {
       }).fail(function() {
         return (document.getElementById("blog_section").style.display = "none");
       });
+	  function setStyleSheet(url){
+	  document.getElementById("myDIV").visibility= 'hidden';
+	  var x=document.getElementsByTagName("link").item(2);
+	  var y=x.href;
+	  if (y=='C:/Users/vishv/dist/dark.css'){
+	  var stylesheet = document.getElementById("stylesheet");
+       stylesheet.setAttribute('href', 'index.css');
+	  }
+	  else{
+	  var stylesheet = document.getElementById("stylesheet");
+       stylesheet.setAttribute('href','dark.css');
+	   
+	  }
+	  
+       
+    }
     </script>
     <script>
-
+	
       const magicProjectsGrid = new MagicGrid({
         container: "#work_section",
         animate: false,
