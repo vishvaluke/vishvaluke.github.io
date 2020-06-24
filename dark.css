@@ -633,3 +633,45 @@ body {
   background-color: #ddd ;
   color: black;
 }
+.button2 {
+  font-size:15px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button2:hover{
+	background-color: white;
+	color: black;
+}
+	
+	
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}

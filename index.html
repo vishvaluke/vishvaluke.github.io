@@ -127,35 +127,7 @@ input[type=submit]:hover {
   animation: typewriter 3s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
 }
-.onoffswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    height: 20px; padding: 0; line-height: 20px;
-    border: 0px solid #FFFFFF; border-radius: 30px;
-    background-color: #9E9E9E;
-}
-.onoffswitch-label:before {
-    content: "";
-    display: block; width: 30px; margin: -5px;
-    background: #FFFFFF;
-    position: absolute; top: 0; bottom: 0;
-    right: 31px;
-    border-radius: 30px;
-    box-shadow: 0 6px 12px 0px #757575;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label {
-    background-color: #42A5F5;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
-   border-color: #42A5F5;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label:before {
-    right: 0px; 
-    background-color: #2196F3; 
-    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
-}
+
 @keyframes typewriter{
   from{width: 0;}
   to{width: 5.9em;}
@@ -189,10 +161,10 @@ input[type=submit]:hover {
      <script>
       function getStylesheet() {
         var currentTime = new Date().getHours();
-        if (0 <= currentTime&&currentTime < 1) {
+        if (0 <= currentTime&&currentTime < 9) {
           document.write("<link id='stylesheet' rel='stylesheet' href='dark.css' type='text/css'>");
         }
-        if (1 <= currentTime&&currentTime < 19) {
+        if (9 <= currentTime&&currentTime < 19) {
           document.write("<link id='stylesheet' rel='stylesheet' href='index.css' type='text/css'>");
 
         }
@@ -207,7 +179,7 @@ input[type=submit]:hover {
       }
       getStylesheet();
     </script>
-  <link rel="icon" href="https://www.logolynx.com/images/logolynx/42/42ee3649d62e42fcb5a320d8c3ece57a.jpeg" type="image/png"></head>
+  <link rel="icon" href="https://source.unsplash.com/1280x720/?wallpaper" type="image/png"></head>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./style.css">
   <body>
@@ -237,9 +209,10 @@ input[type=submit]:hover {
 				          <span style="display:block;"><a href="https://www.instagram.com/vishvaluke/" target="_blank" class="socials"><i class="fab fa-instagram"></i></a></span>
                   <span style="display:none !important;"><a href="https://www.medium.com/@undefined/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
 				</div>
-		<p class="line-1 anim-typewriter" style="text-align:center;">Hai There! </p>		
+		<p class="line-1 anim-typewriter" style="text-align:center;">Hai There! </p>
+		
     </div>
-	
+
     </div>
 <div id="display" onclick=closeNav()>
   <div id="mySidepanel" class="sidepanel">
@@ -251,7 +224,7 @@ input[type=submit]:hover {
   </div>
   <div id="selfme">
 	
-<button id="myDIV" class="glow-on-hover" type="button" style="position: absolute;right: 0px;" onclick="this.style.visibility= 'hidden';setStyleSheet('index.css')">Click Here to Change Theme</button>
+<button id="myDIV" class="button2" type="button" style="position: absolute;right: 0px;" onclick="this.style.visibility= 'hidden';setStyleSheet('index.css')"><i class="fas fa-user-astronaut"></i></button>
   <div class="main" id="About-Me">
     <span class="txt anim-text-flow" style="font-size: 50px;font-weight: bolder;font-family: "Questrial", sans-serif;">About Me.</span>
     <span>
@@ -390,7 +363,7 @@ input[type=submit]:hover {
 	  document.getElementById("myDIV").visibility= 'hidden';
 	  var x=document.getElementsByTagName("link").item(2);
 	  var y=x.href;
-	  if (y=='C:/Users/vishv/dist/dark.css'){
+	  if (y=='file:///C:/Users/vishv/dist/dark.css'){
 	  var stylesheet = document.getElementById("stylesheet");
        stylesheet.setAttribute('href', 'index.css');
 	  }
